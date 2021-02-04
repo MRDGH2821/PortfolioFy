@@ -1,13 +1,9 @@
-<div align="center">
-<h1 align="center">Ultimate Portfolio Maker</h1>
-<h3 align="center">Dynamically Self Updating Portfolio</h3>
-<h4 align="center"> Developed by: Kaustubh Gupta </h4>
-  </div>
+![PortfolioFy](https://socialify.git.ci/kaustubhgupta/PortfolioFy/image?description=1&font=KoHo&forks=1&issues=1&language=1&owner=1&pattern=Floating%20Cogs&pulls=1&stargazers=1&theme=Light) 
 <p align="center">
 <img src="https://img.shields.io/badge/python%20-%2314354C.svg?&style=for-the-badge&logo=python&logoColor=white" align="center">
 <img src="https://img.shields.io/badge/docker%20-%230db7ed.svg?&style=for-the-badge&logo=docker&logoColor=white" align="center">
 <img src="https://img.shields.io/badge/markdown-%23000000.svg?&style=for-the-badge&logo=markdown&logoColor=white" align="center">
-<img src="https://img.shields.io/badge/github%20actions%20-%232671E5.svg?&style=for-the-badge&logo=github%20actions&logoColor=white "align="center"/>
+<img src="https://img.shields.io/badge/github%20actions%20-%232671E5.svg?&style=for-the-badge&logo=github%20actions&logoColor=white "align="center">
 </p>
 <p align="center">
 <img src="./images/combinedPreview.png" align="center">
@@ -62,13 +58,14 @@ _Note: To avoid any error & to stay in latest version of this action, replace `k
 
 This action generates a index.html file which is website ready. Simply enable the GitHub pages to deploy the index file and boom, you have your portfolio which self updates when you add your projects or hackathons projects!
 
-| Option         | Default Value | Description                                                     | Required |
-| -------------- | ------------- | --------------------------------------------------------------- | -------- |
-| `gh_token`     | NA            | GitHub Personal Access token                                    | Yes      |
-| `theme`        | `1`           | Type of webpage you want to render                              | No       |
-| `blogs`        | `False`       | Whether you want to include blogs in your Portfolio             | No       |
-| `hackathons`   | `False`       | Apart from Personal projects you can include hackathon projects | No       |
-| `stats_choice` | `1`           | Which type of GitHub stats you want to display in your profile  | No       |
+| Option         | Default Value | Description                                                                  | Required | Example |
+| -------------- | ------------- | ---------------------------------------------------------------------------- | -------- | ------- |
+| `gh_token`     | NA            | GitHub Personal Access token                                                 | Yes      |  NA     |
+| `theme`        | `1`           | Type of webpage you want to render: 1 or 2                                   | No       |  1      | 
+| `blogs`        | `False`       | Whether you want to include blogs in your Portfolio (True/False)             | No       |  True   |
+| `hackathons`   | `False`       | Apart from Personal projects you can include hackathon projects (True/False) | No       |  True
+| `stats_choice` | `1`           | Which type of GitHub stats you want to display in your profile: 1 or 2       | No       |  2
+| `social_links` | `False`       | You can add social links for Linkedin, Twitter, Dev.to, Medium, and Stackoverflow. Pass it as string of all the links | No       | 'https://www.linkedin.com/in/kaustubh-gupta/, https://twitter.com/Kaustubh1828, https://medium.com/@kaustubhgupta1828, https://dev.to/kaustubhgupta, https://stackoverflow.com/users/14681298/kaustubh'|
 
 ## Add Blog Updates
 
@@ -154,8 +151,24 @@ This is an advanced theme provided by [Start Bootstrap](https://startbootstrap.c
 <img src="./images/gifpreviewL2.gif" align="center">
 </p>
 
-## Special Mentions
+## Add Social Links
+You can add your social media links to connect better with your audience. Currently, you can add links of Linkedin, Twitter, Dev.to, Medium, and Stackoverflow. There is no restriction to add all of them. You can skip this parameter, add partial links or all the links depending upon the usage!
 
+```yml
+.
+.
+.
+- uses: actions/checkout@v2
+        - uses: kaustubhgupta/PortfolioFy@v2.0.1 # If any new version is released, kindly specify that or you can directly specify @main to avoid version confusion
+          with:
+            gh_token: ${{ secrets.TOKEN }} # Create a secret for access token and modify the name as you wish
+            social_links: 'https://www.linkedin.com/in/kaustubh-gupta/, https://twitter.com/Kaustubh1828, https://medium.com/@kaustubhgupta1828, https://dev.to/kaustubhgupta, https://stackoverflow.com/users/14681298/kaustubh'
+```
+
+## Documentation
+A detailed documentation for this project is available [here](https://kaustubhgupta.github.io/PortfolioFy/)
+
+## Special Mentions
 A special thanks to:
 
 - [Anurag Hazra](https://github.com/anuraghazra/github-readme-stats) for creating readme stats Vercel app which is being used for GitHub Stats.
@@ -166,12 +179,12 @@ A special thanks to:
 - [Start Bootstrap](https://startbootstrap.com/theme/resume) for amazing themes!
 - [GitHub actions](https://docs.github.com/en/free-pro-team@latest/actions) docs, it's the best guide!
 
-_Create blogs, videos and tag me! I will definitely have a look and feature them here!_
 
-## Featured Content
+## Our Valuable Contributors 👩‍💻👨‍💻 :
+<a href="https://github.com/kaustubhgupta/PortfolioFy/graphs/contributors">
+  <img src="https://contributors-img.web.app/image?repo=kaustubhgupta/PortfolioFy" />
+</a>
 
-- [GitHub Action That Automates Portfolio Generation](https://towardsdatascience.com/github-action-that-automates-portfolio-generation-bc15835862dc) - Medium Blog
-- [YouTube Video Guide & Demo](https://youtu.be/uIQhIdErYSk) - By [Mihir Rabade](https://github.com/MRDGH2821)
 
 ## License
 
